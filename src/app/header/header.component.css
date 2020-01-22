@@ -1,0 +1,12 @@
+:host {
+    display:block;
+    height:3em;
+    padding-left:1em;
+    background-color:#bdbdbd;
+    border-top: .7em solid #bdbdbd;
+    border-left: .5em solid #535353;
+}
+
+.title {
+    margin-top:0px;
+}

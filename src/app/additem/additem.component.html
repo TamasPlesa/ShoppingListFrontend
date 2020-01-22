@@ -1,0 +1,9 @@
+
+<h3 class = 'addItemLabel'>Add Item</h3>
+
+<form class = "addItemForm" action = "#" method="post">
+    <input [(ngModel)] = "item" placeholder="Enter Item" class = "addItemInput"
+    type="text" name="task"/>
+
+    <button (click) = add() class = "addItemSubmitBtn" value="Add">Submit</button>
+</form>
