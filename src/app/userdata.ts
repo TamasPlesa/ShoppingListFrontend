@@ -1,4 +1,4 @@
 export class UserData {
-    username;
-    password;
+  username;
+  password;
 }

@@ -6,13 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent  {
 
-  constructor(private router:Router) {
+  constructor(private router: Router) {
     const token = sessionStorage.getItem('jsessionid');
-
-    if(token === null || JSON.parse(token).expires_in < new Date().getTime()) {
-      router.navigateByUrl('/login')
+    if (token === null || JSON.parse(token).expires_in < new Date().getTime()) {
+      router.navigateByUrl('login');
+    }
    }
-  }
+
+
+
 }

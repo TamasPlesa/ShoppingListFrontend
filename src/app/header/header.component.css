@@ -1,12 +1,12 @@
 :host {
-    display:block;
-    height:3em;
-    padding-left:1em;
-    background-color:#bdbdbd;
-    border-top: .7em solid #bdbdbd;
-    border-left: .5em solid #535353;
+	display: block;
+	height: 3em;
+	padding-left: 1em;
+	background-color: #f4f4f4;
+	border-top: .7em solid #f4f4f4;
+	border-left: .5em solid #f4f4f4; 
 }
 
 .title {
-    margin-top:0px;
+	margin-top: 0px;
 }
