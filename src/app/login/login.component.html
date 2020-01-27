@@ -1,6 +1,28 @@
-<h1>Log In</h1>
 
-<form class= "loginForm" (submit)="login()">
+
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+
+ <div class="container">
+
+      <div id="login">
+		<a [routerLink]="['/login']">
+		<img class="logo" src="/assets/plesapp.png"  width="280" height="200" style="vertical-align:top" />
+	</a>
+        <form method="post">
+
+          <fieldset class="clearfix">
+
+
+
+
+<form class= "fontawesome-password" (submit)="login()">
   <input class = "input"
 			required
 			placeholder = "Enter Username"
@@ -12,11 +34,11 @@
 			
 		<div class = "error" *ngIf = "name.touched && name.errors != null">
 			<div *ngIf="name.errors['required']">
-				<label>ERROR: Required Field</label>
+				<label class="textcenter">Required Field</label>
 			</div>
     </div>
     
-     <input class = "input"
+     <input class = "fontawesome-lock"
 			required
 			placeholder = "Enter Password"
 			[(ngModel)] = "userData.password"
@@ -27,7 +49,7 @@
 			
 		<div class = "error" *ngIf = "pass.touched && pass.errors != null">
 			<div *ngIf="pass.errors['required']">
-				<label>ERROR: Required Field</label>
+				<label class="textcenter">Required Field</label>
 			</div>
     </div>
     
@@ -36,9 +58,11 @@
       <label>ERROR: invalid input</label>
     </div>
 
-		<button class="submitBtn">Submit</button>
-		<br/>
-		<label>If you don't have an acoount, please register</label>
-		<br/>
-		<a [routerLink]="['/registration']">Click here to register</a>
+		<button type="submit" class="button" value="submit">Submit</button>
 </form>
+
+          </fieldset>
+
+       
+
+        <p class="textcenter">Not a member? <a [routerLink]="['/registration']" href="#" class="blue">Sign up now</a></p>

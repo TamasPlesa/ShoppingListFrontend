@@ -3,14 +3,14 @@
   height: 3em;
   width: 100%;
   position: fixed;
-  background-color: lightgrey;
-  bottom:0px;
+  background-color: rgb(190, 222, 229);
+  bottom: 0px;
 }
 
 .copyText {
   padding-top: 2.7em;
   padding-right: 1em;
-  font-size: .5em;
+  font-size: .7em;
   opacity: .3;
   float: right;
 }
