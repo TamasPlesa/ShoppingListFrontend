@@ -1,26 +1,19 @@
+<div class="container"> 
 
 
-<div id="clouds">
-  <div class="cloud x1"></div>
-  <div class="cloud x2"></div>
-  <div class="cloud x3"></div>
-  <div class="cloud x4"></div>
-  <div class="cloud x5"></div>
+  <a [routerLink]="['/home']">
+		<img class="logo" src="/assets/plesapp.png"  width="280" height="200" style="vertical-align:top" />
+	</a>
+  <form class="addProductForm" action="#" method="POST">
+    <input [(ngModel)]="product.name" size="10" placeholder="Enter product name" class="addProductInput"
+    type="text" name="name"/>
+    <br>
+    <input [(ngModel)]="product.price" placeholder="Enter price" class="addProductInput"
+    type="text" name="name"/>
+    <br>
+    <button type="submit" (click) = "add()" class = "button">Submit</button>
+  </form>
 </div>
-
-
-<div class="container">
-
-
-<h3 class = "addTaskLabel">Add Task</h3>
-
-<form class="addTaskForm" action="#" method="POST">
-  <input [(ngModel)]="name" placeholder="Enter name" class="addProductInput"
-  type="text" name="name"/>
-
-   <input [(ngModel)]="price" placeholder="Enter price" class="addProductInput"
-  type="text" name="name"/>
-
-  <br/>
-  <button type="submit" class="button" value="submit" (click) = "add()">Add Product</button>
-</form>
+<br>
+<br>
+<br>

@@ -1,3 +1,8 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* You can add global styles to this file, and also import other style files */
+
+
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
 
@@ -6,6 +11,36 @@
        box-sizing: border-box;
 }
 
+
+
+.addProductInput {
+    background-color: #3b4148;
+    border-radius: 3px 3px 3px 3px;
+    color: #eee;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 0.5em;
+    padding: 0 16px;
+    width: 280px;
+    height: 30px;
+  }
+
+.button[type="submit"] {
+    border-radius: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: 3em;
+    background-color: #ea4c88;
+    color: #eee;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    width: 280px;
+  }
+  
+  .button[type="submit"]:hover {
+    background-color: #d44179;
+  }
 
 body {
   background: #2c3338;
@@ -16,357 +51,29 @@ body {
   overflow-x:hidden !important;
 }
 
-a {
-  color: #eee;
-  text-decoration: none;
+
+.addProductLabel {
+    position: absolute;
 }
 
-a:hover {
-  text-decoration: underline;
+
+.addProductSubmitBtn {
+    position: absolute;
+    left: 13%;
 }
 
-input {
-  border: none;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5em;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-p {
-  line-height: 1.5em;
-}
 
 .container {
-  left: 38%;
-  position:absolute;
-   top: 4%;
+  left: 40%;
+  position: fixed;
+   top: -1%;
 
-}
-
-#login {
-  width: 280px;
 }
 
 .logo {
-
-align-self: center;
-background: none;
-widows: 50px;
-margin-bottom: 4em;
+    align-items: center;
 }
 
-#login form input {
-  height: 50px;
-}
 
-#login form input[type="text"], input[type="password"] {
-  background-color: #3b4148;
-  border-radius: 3px 3px 3px 3px;
-  color: #606468;
-  text-align: center;
-  align-content: center;
-  margin-bottom: 1em;
-  padding: 0 16px;
-  width: 277px;
-}
-
-.textcenter {
-  text-align: center;
-}
-
-.button[type="submit"] {
-  border-radius: 15px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  height: 3em;
-  background-color: #ea4c88;
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-  width: 280px;
-}
-
-.button[type="submit"]:hover {
-  background-color: #d44179;
-}
-
-#login > p {
-  text-align: center;
-}
-
-#login > p span {
-  padding-left: 5px;
-}
-
-/*Lets start with the cloud formation rather*/
-
-/*The container will also serve as the SKY*/
-
-*{ margin: 0; padding: 0;}
-
-#clouds{
-    padding: 200px 0;
-    background: #c9dbe9;
-    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
-    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-}
 
 /*Time to finalise the cloud shape*/
-.cloud {
-    width: 200px; height: 60px;
-    background: #fff;
-    
-    border-radius: 200px;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
-    
-    position: relative; 
-}
-
-.cloud:before, .cloud:after {
-    content: '';
-    position: absolute; 
-    background: #fff;
-    width: 100px; height: 80px;
-    position: absolute; top: -15px; left: 10px;
-    
-    border-radius: 100px;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
-    -moz-transform: rotate(30deg);
-}
-
-.cloud:after {
-    width: 120px; height: 120px;
-    top: -55px; left: auto; right: 15px;
-}
-
-/*Time to animate*/
-.x1 {
-    -webkit-animation: moveclouds 15s linear infinite;
-    -moz-animation: moveclouds 15s linear infinite;
-    -o-animation: moveclouds 15s linear infinite;
-}
-
-/*variable speed, opacity, and position of clouds for realistic effect*/
-.x2 {
-    left: 200px;
-    
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    transform: scale(0.6);
-    opacity: 0.6; /*opacity proportional to the size*/
-    
-    /*Speed will also be proportional to the size and opacity*/
-    /*More the speed. Less the time in 's' = seconds*/
-    -webkit-animation: moveclouds 25s linear infinite;
-    -moz-animation: moveclouds 25s linear infinite;
-    -o-animation: moveclouds 25s linear infinite;
-}
-
-.x3 {
-    left: -250px; top: -200px;
-    
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0.8; /*opacity proportional to the size*/
-    
-    -webkit-animation: moveclouds 20s linear infinite;
-    -moz-animation: moveclouds 20s linear infinite;
-    -o-animation: moveclouds 20s linear infinite;
-}
-
-.x4 {
-    left: 470px; top: -250px;
-    
-    -webkit-transform: scale(0.75);
-    -moz-transform: scale(0.75);
-    transform: scale(0.75);
-    opacity: 0.75; /*opacity proportional to the size*/
-    
-    -webkit-animation: moveclouds 18s linear infinite;
-    -moz-animation: moveclouds 18s linear infinite;
-    -o-animation: moveclouds 18s linear infinite;
-}
-
-.x5 {
-    left: -150px; top: -150px;
-    
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0.8; /*opacity proportional to the size*/
-    
-    -webkit-animation: moveclouds 20s linear infinite;
-    -moz-animation: moveclouds 20s linear infinite;
-    -o-animation: moveclouds 20s linear infinite;
-}
-
-@-webkit-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-}
-@-moz-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-}
-@-o-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-}
-.bottom {
-    width:100%; margin:0 auto; text-align:center; padding:10px 0; height:100px; position:absolute;
-}
-.bottom h3 {color:white; font-size:30px; font-weight:bold; margin-top:45px; padding-bottom:45px;}
-.blue { color:#09c;}
-
-
-
-
-
-
-
-body {
-    background-color: #8f4df8
-}
-
-.main-todo-input {
-    background: #fff;
-    padding: 0 120px 0 0;
-    border-radius: 1px;
-    margin-top: 200px;
-    box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3)
-}
-
-.fl-wrap {
-    float: left;
-    width: 100%;
-    position: relative
-}
-
-.main-todo-input:before {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    width: 50px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.41);
-    left: 50%;
-    margin-left: -25px
-}
-
-.main-todo-input-item {
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    border-right: 1px solid #eee;
-    height: 50px;
-    position: relative
-}
-
-.main-todo-input-item input:first-child {
-    border-radius: 100%
-}
-
-.main-todo-input-item input {
-    float: left;
-    border: none;
-    width: 100%;
-    height: 50px;
-    padding-left: 20px
-}
-
-.main-search-button {
-    background: #4DB7FE
-}
-
-.main-search-button {
-    position: absolute;
-    right: 0px;
-    height: 50px;
-    width: 120px;
-    color: #fff;
-    top: 0;
-    border: none;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    cursor: pointer
-}
-
-.main-todo-input-wrap {
-    max-width: 500px;
-    margin: 20px auto;
-    position: relative
-}
-
-:focus {
-    outline: 0
-}
-
-@media only screen and (max-width: 768px) {
-    .main-todo-input {
-        background: rgba(255, 255, 255, 0.2);
-        padding: 14px 20px 10px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.0)
-    }
-
-    .main-todo-input-item {
-        width: 100%;
-        border: 1px solid #eee;
-        height: 50px;
-        border: none;
-        margin-bottom: 10px
-    }
-
-    .main-todo-input-item input {
-        border-radius: 6px !important;
-        background: #fff
-    }
-
-    .main-search-button {
-        position: relative;
-        float: left;
-        width: 100%;
-        border-radius: 6px
-    }
-}
-
-.remove {
-    float: right;
-    color: #757575 !important;
-    font-size: 14px
-}
-
-#list-items {
-    padding-left: 20px;
-    padding-top: 15px
-}
-
-ul {
-    padding: 0;
-    text-align: left;
-    list-style: none
-}
-
-.todo-text {
-    color: #757575;
-    margin-left: 10px
-}
-
-.strike {
-    color: blue
-}
-
-.todo-listing {
-    padding: 0px 29px 0 0;
-    margin-top: 54px !important
-}

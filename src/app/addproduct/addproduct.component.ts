@@ -1,5 +1,6 @@
-import { ProdcuctService } from '../prodcuct.service';
 import { Component } from '@angular/core';
+import { ProdcuctService } from '../services/prodcuct.service';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-addproduct',
@@ -11,21 +12,13 @@ export class AddproductComponent {
 
   constructor(private productsService: ProdcuctService) { }
 
-  name: string;
-  price: string;
+  product: Product = new Product();
 
 
   add() {
-    this.productsService.addProduct(this.name, this.price, JSON.parse(sessionStorage.getItem('jsessionid')).access_token);
-    this.name = '';
-    this.price = '';
+    this.productsService.addProduct(this.product, JSON.parse(sessionStorage.getItem('jsessionid')).access_token);
+    this.product = new Product();
   }
 
-  addAndLoad() {
-    this.productsService.addProduct(this.name, this.price, JSON.parse(sessionStorage.getItem('jsessionid')).access_token);
-    this.name = '';
-    this.price = '';
-    this.productsService.load();
-  }
 
 }
