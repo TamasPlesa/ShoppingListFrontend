@@ -32,7 +32,6 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
     ListproductsComponent,
     AddproductComponent,
     RegisterComponent,
